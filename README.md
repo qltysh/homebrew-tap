@@ -23,6 +23,7 @@ qlty --help
 ```
 
 [![docs.qlty.sh](https://img.shields.io/badge/docs-docs.qlty.sh-08b2b7)](https://docs.qlty.sh)
+[![brew test-bot](https://github.com/qltysh/homebrew-tap/actions/workflows/tests.yml/badge.svg)](https://github.com/qltysh/homebrew-tap/actions/workflows/tests.yml)
 
 ## 🖥️ System Requirements
 
