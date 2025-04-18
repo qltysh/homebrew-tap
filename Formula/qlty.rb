@@ -1,7 +1,6 @@
 class Qlty < Formula
   desc "Code quality toolkit"
   homepage "https://qlty.sh"
-  version "0.511.0"
   license "BUSL-1.1"
 
   if OS.mac?
@@ -30,7 +29,7 @@ class Qlty < Formula
     bin.install "qlty"
   end
 
-  def test
+  test do
     assert_match "qlty #{version}", shell_output("#{bin}/qlty --version")
     assert_match "qlty", shell_output("#{bin}/qlty --help")
   end
