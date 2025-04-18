@@ -43,8 +43,8 @@ qlty --help
 
 ## ⚖️ License
 
-This repository is provided under the MIT License.
+This Homebrew tap is provided under the MIT License.
 
 Qlty CLI is published under a Fair Source license. As Fair Source, the Qlty CLI is free to use (including in commercial contexts), modify, and distribute in accordance with its license.
 
-This code is made available under the Business Source License 1.1 (BSL) and transitions into Open Source via a Delayed Open Source Publication (DOSP). More details are available [in the qltysh/qlty repository](https://github.com/qltysh/qlty/blob/main/LICENSE.md).
+More details are available [in the qltysh/qlty repository](https://github.com/qltysh/qlty/blob/main/LICENSE.md).
