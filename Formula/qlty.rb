@@ -1,9 +1,8 @@
 class Qlty < Formula
   desc "Code quality toolkit"
   homepage "https://qlty.sh"
-  license "BUSL-1.1"
-
   version "0.511.0"
+  license "BUSL-1.1"
 
   if OS.mac?
     if Hardware::CPU.arm?
