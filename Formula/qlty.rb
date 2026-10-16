@@ -2,25 +2,25 @@ class Qlty < Formula
   desc "Code quality toolkit"
   homepage "https://qlty.sh"
   license "BUSL-1.1"
-  version "0.656.0"
+  version "0.657.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/qltysh/qlty/releases/download/v0.656.0/qlty-aarch64-apple-darwin.tar.xz"
-      sha256 "f071bec3efea9790bdd56c42624e8de325680424b780e7ce62840bbc75fa4e59"
+      url "https://github.com/qltysh/qlty/releases/download/v0.657.0/qlty-aarch64-apple-darwin.tar.xz"
+      sha256 "c3aa842a956d79aa3073f2e621b260eb9f5fdbbcec42b544e6cd0baf4ab6e2a1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/qltysh/qlty/releases/download/v0.656.0/qlty-x86_64-apple-darwin.tar.xz"
-      sha256 "b69713bb38ac79f82370f30ff574534d7b7403af7220194485d4f293d566927c"
+      url "https://github.com/qltysh/qlty/releases/download/v0.657.0/qlty-x86_64-apple-darwin.tar.xz"
+      sha256 "1e197ef81212efb17a93e0b96ecae92d2a8d62ab91c46a728d2fa614bb07decb"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/qltysh/qlty/releases/download/v0.656.0/qlty-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1536f7cb48bb0c1aa7272ebad27e3a35eb9809dfb9df2e22b56dfe28f9c8e540"
+      url "https://github.com/qltysh/qlty/releases/download/v0.657.0/qlty-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "0d62fe65994e2d306873fd70febf0cccfa01bfb6c0f113380084c58d65b71cae"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/qltysh/qlty/releases/download/v0.656.0/qlty-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "15cb8eca3318cf39822993137d782d8e4cc0640ad38c713d2f1e4a22183a95fd"
+      url "https://github.com/qltysh/qlty/releases/download/v0.657.0/qlty-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "25a37d639c73468267cbb86abeed7d39199b416e3e3288afdb24edcb967c02c5"
     end
   end
 
