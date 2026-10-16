@@ -1,25 +1,26 @@
 class Qlty < Formula
   desc "Code quality toolkit"
   homepage "https://qlty.sh"
-  version "0.654.0"
+  license "BUSL-1.1"
+  version "0.655.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/qltysh/qlty/releases/download/v0.654.0/qlty-aarch64-apple-darwin.tar.xz"
-      sha256 "2a5d02117a276484ab6d604a3fcdacbc312b7af5bcb446bb06e344fe0466cd99"
+      url "https://github.com/qltysh/qlty/releases/download/v0.655.0/qlty-aarch64-apple-darwin.tar.xz"
+      sha256 "3d0c462987a41e514957f5776427eea6419224d60c3c47d85fef8ccc61f1ab43"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/qltysh/qlty/releases/download/v0.654.0/qlty-x86_64-apple-darwin.tar.xz"
-      sha256 "d096ee7f3b4a0710a3f0cfb5ec31ee132c408259d4f93017314675b26c8821c5"
+      url "https://github.com/qltysh/qlty/releases/download/v0.655.0/qlty-x86_64-apple-darwin.tar.xz"
+      sha256 "faf596bdfda2abd8c21ad7340c074a7325105ea8235d01a24a9eac5d6b098dd9"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/qltysh/qlty/releases/download/v0.654.0/qlty-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "14e2856e591b55f44b6b38e33ddf1dbb021cad87dedbba47911ad6a15b8f83a9"
+      url "https://github.com/qltysh/qlty/releases/download/v0.655.0/qlty-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "6adaa0fd5aee9b277d9a20f58c2bf982ea6e0e99a9d1b780a03b5fdcb607c3b2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/qltysh/qlty/releases/download/v0.654.0/qlty-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "07a35e05150cb1d4a9c1f842c4bd910ad68faca3ad74a4a021fc324236554734"
+      url "https://github.com/qltysh/qlty/releases/download/v0.655.0/qlty-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d05d8e68aaa9f0f7434094d16a6cd37682511b55640625e0681257f4650db47f"
     end
   end
 
@@ -63,5 +64,10 @@ class Qlty < Formula
     # Install any leftover files in pkgshare; these are probably config or
     # sample files.
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
+  end
+
+  test do
+    assert_match "qlty #{version}", shell_output("#{bin}/qlty --version")
+    assert_match "qlty", shell_output("#{bin}/qlty --help")
   end
 end
