@@ -24,6 +24,7 @@ qlty --help
 Since Homebrew 6.0, formulae from taps outside Homebrew need your trust before Homebrew loads them. Installing by the full name, as above, trusts the `qlty` formula and nothing else in this tap. If you installed qlty from this tap before Homebrew 6.0 and `brew upgrade` now skips it, run `brew trust --formula qltysh/tap/qlty`. See Homebrew's [Tap Trust](https://docs.brew.sh/Tap-Trust) page for details.
 
 [![docs.qlty.sh](https://img.shields.io/badge/docs-docs.qlty.sh-08b2b7)](https://docs.qlty.sh)
+[![brew test-bot](https://github.com/qltysh/homebrew-tap/actions/workflows/tests.yml/badge.svg)](https://github.com/qltysh/homebrew-tap/actions/workflows/tests.yml)
 
 ## 🖥️ System Requirements
 
