@@ -15,22 +15,22 @@ The Qlty CLI is **completely free for all use**, including for commercial projec
 ## 🚀 Quick Start
 
 ```bash
-brew tap qltysh/tap
-brew install qlty
+brew install qltysh/tap/qlty
 
 qlty --version
 qlty --help
 ```
 
+Since Homebrew 6.0, formulae from taps outside Homebrew need your trust before Homebrew loads them. Installing by the full name, as above, trusts the `qlty` formula and nothing else in this tap. If you installed qlty from this tap before Homebrew 6.0 and `brew upgrade` now skips it, run `brew trust --formula qltysh/tap/qlty`. See Homebrew's [Tap Trust](https://docs.brew.sh/Tap-Trust) page for details.
+
 [![docs.qlty.sh](https://img.shields.io/badge/docs-docs.qlty.sh-08b2b7)](https://docs.qlty.sh)
-[![brew test-bot](https://github.com/qltysh/homebrew-tap/actions/workflows/tests.yml/badge.svg)](https://github.com/qltysh/homebrew-tap/actions/workflows/tests.yml)
 
 ## 🖥️ System Requirements
 
-| Operating System | x86_64 | arm64 | 
-|-|-|-|
-| MacOS | ✅ | ✅ |
-| Linux | ✅ | ✅ |
+| Operating System | x86_64 | arm64 |
+| ---------------- | ------ | ----- |
+| MacOS            | ✅     | ✅    |
+| Linux            | ✅     | ✅    |
 
 ## 🛟 Help or Feedback
 
@@ -40,7 +40,6 @@ qlty --help
 - [Community support](https://github.com/orgs/qltysh/discussions/categories/q-a) via GitHub Discussions
 - [Feature requests](https://github.com/orgs/qltysh/discussions/categories/feedback) via GitHub Discussions
 - [Bug reports](https://github.com/qltysh/qlty-action/issues/new/choose) via GitHub Issues
-
 
 ## ⚖️ License
 
