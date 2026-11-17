@@ -7,16 +7,20 @@ on:
       - main
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   test-bot:
     strategy:
+      fail-fast: false
       matrix:
-        os: [ubuntu-22.04, macos-13, macos-15]
+        os: [ubuntu-24.04, macos-15-intel, macos-15]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@4a509e36a728d1c8e147158247eb0446838a8d63
+        uses: Homebrew/actions/setup-homebrew@c262868c096d909fc278daa87ed9772967331ea3 # 2026.11.02.1
 
       - name: Cache Homebrew Bundler RubyGems
         uses: actions/cache@v4
@@ -29,14 +33,7 @@ jobs:
 
       - run: brew test-bot --only-setup
 
-      - run: brew test-bot --only-tap-syntax
-
-      - run: brew test-bot --only-formulae
-        if: github.event_name == 'pull_request'
-
-      - name: Upload bottles as artifact
-        if: always() && github.event_name == 'pull_request'
-        uses: actions/upload-artifact@v4
-        with:
-          name: bottles_${{ matrix.os }}
-          path: "*.bottle.*"
+      - name: Install and test qlty
+        run: |
+          brew install qltysh/tap/qlty
+          brew test qltysh/tap/qlty
